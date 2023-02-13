@@ -1,8 +1,7 @@
-from typing import List, Tuple
 import numpy as np
 import requests
 
-def solve_tsp(distances: np.ndarray) -> Tuple[int, List[int]]:
+def solve_tsp(distances: np.ndarray) -> tuple[int, list[int]]:
     n = distances.shape[0]
     path = np.zeros(n, dtype=int)
     best_path = np.arange(n)
@@ -37,6 +36,7 @@ list_nodes = []
 
 been_there = []
 times = []
+
 
 for i in range(len(nodes)):
     temp = []
